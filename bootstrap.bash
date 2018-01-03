@@ -29,8 +29,13 @@ function install_jupyter {
     sudo pip3 install jupyter
 }
 
+function link_notebooks {
+    ln -s /vagrant/Notebooks Notebooks
+}
+
 # Execution section
 setup_locale
 install_packages
 upgrade_pip
 install_jupyter
+link_notebooks
